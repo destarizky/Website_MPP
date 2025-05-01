@@ -21,74 +21,339 @@
     </div>
 </section>
 
+<!-- Additional Section Based on Image -->
+<section class="about-mpp py-5" style="background-color: #0056b3;">
+    <div class="container">
+        <h2 class="fw-bold text-center text-white">TENTANG MPP</h2>
+        <div class="bg-white p-4 rounded-3 mt-4">
+            <p class="text-center mb-0" style="color: #0056b3;">
+                MPP Bangkalan merupakan salah satu upaya Pemerintah Kabupaten Bangkalan untuk meningkatkan kualitas dan standar pelayanan publik kepada masyarakat. 
+                MPP Bangkalan telah beroperasi sejak tahun 2020, namun baru tahun 2023 ini dinyatakan layak untuk diresmikan setelah memenuhi kriteria yang ditetapkan oleh Kementerian PANRB.
+                MPP Bangkalan menawarkan kemudahan, kecepatan, keterjangkauan, keamanan dan kenyamanan kepada masyarakat dalam mendapatkan pelayanan publik. Saat ini, terdapat 105 jenis produk layanan yang disediakan oleh 13 instansi pemerintah, baik pusat maupun daerah, yang telah bergabung di MPP Bangkalan.
+            </p>
+        </div>
+        <div class="d-flex justify-content-center gap-4 mt-5">
+            <div class="text-center">
+                <div class="icon bg-white rounded-circle mb-3 clickable-icon" data-icon="1" style="width: 60px; height: 60px; display: inline-flex; align-items: center; justify-content: center;">
+                    <i class="bi bi-lightbulb-fill" style="color: #0056b3;"></i>
+                </div>
+                <p class="fw-bold text-white">Transparansi Pelayanan</p>
+            </div>
+            <div class="text-center">
+                <div class="icon bg-white rounded-circle mb-3 clickable-icon" data-icon="2" style="width: 60px; height: 60px; display: inline-flex; align-items: center; justify-content: center;">
+                    <i class="bi bi-people-fill" style="color: #0056b3;"></i>
+                </div>
+                <p class="fw-bold text-white">Kenyamanan Pelayanan</p>
+            </div>
+            <div class="text-center">
+                <div class="icon bg-white rounded-circle mb-3 clickable-icon" data-icon="3" style="width: 60px; height: 60px; display: inline-flex; align-items: center; justify-content: center;">
+                    <i class="bi bi-funnel-fill" style="color: #0056b3;"></i>
+                </div>
+                <p class="fw-bold text-white">Efisiensi Pelayanan</p>
+            </div>
+        </div>
+</section>
+
+<style>
+    .clickable-icon {
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background-color: #ffffff !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .clickable-icon:hover {
+        transform: scale(1.1);
+    }
+
+    .clickable-icon.active {
+        background-color: #ffc107 !important; /* Yellow background when active */
+    }
+
+    .clickable-icon i {
+        font-size: 1.5rem;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const icons = document.querySelectorAll('.clickable-icon');
+        
+        icons.forEach(icon => {
+            icon.addEventListener('click', function() {
+                icons.forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    });
+</script>
+
 <!-- Operating Hours Section -->
 <section class="operating-hours py-5">
     <div class="container text-center">
-        <h2 class="fw-bold">JAM OPERASIONAL</h2>
-        <p class="text-secondary">Jam operasional pelayanan MPP Kabupaten Bangkalan</p>
-        <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
-            <div class="p-3 bg-light rounded">Senin: 08:00 - 15:00</div>
-            <div class="p-3 bg-light rounded">Selasa: 08:00 - 15:00</div>
-            <div class="p-3 bg-light rounded">Rabu: 08:00 - 15:00</div>
-            <div class="p-3 bg-light rounded">Kamis: 08:00 - 15:00</div>
-            <div class="p-3 bg-light rounded">Jumat: 08:00 - 15:00</div>
+        <h2 class="fw-bold" style="color: #0056b3;">JAM OPERASIONAL</h2>
+        <p class="text-secondary">Jam Operasional tersebut bisa berubah kapanpun</p>
+        <div class="row align-items-center mt-4">
+            <!-- Illustration -->
+            <div class="col-md-6 text-center">
+                <img src="{{ asset('storage/banners/pageJamOperasional.png') }}" alt="Operating Hours Illustration" class="img-fluid">
+            </div>
+            <!-- Operating Hours -->
+            <div class="col-md-6">
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <!-- Monday -->
+                    <div class="p-3 bg-white rounded operating-hours-card" style="width: 200px;">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-clock"></i>
+                            <span>Senin</span>
+                        </div>
+                        <p class="mb-0">08:00 - 16:00</p>
+                    </div>
+                    <!-- Tuesday -->
+                    <div class="p-3 bg-white rounded operating-hours-card" style="width: 200px;">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-clock"></i>
+                            <span>Selasa</span>
+                        </div>
+                        <p class="mb-0">08:00 - 16:00</p>
+                    </div>
+                    <!-- Wednesday -->
+                    <div class="p-3 bg-white rounded operating-hours-card" style="width: 200px;">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-clock"></i>
+                            <span>Rabu</span>
+                        </div>
+                        <p class="mb-0">08:00 - 16:00</p>
+                    </div>
+                    <!-- Thursday -->
+                    <div class="p-3 bg-white rounded operating-hours-card" style="width: 200px;">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-clock"></i>
+                            <span>Kamis</span>
+                        </div>
+                        <p class="mb-0">08:00 - 16:00</p>
+                    </div>
+                    <!-- Friday -->
+                    <div class="p-3 bg-white rounded operating-hours-card" style="width: 200px;">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-clock"></i>
+                            <span>Jumat</span>
+                        </div>
+                        <p class="mb-0">08:00 - 16:00</p>
+                    </div>
+                    <!-- Saturday -->
+                    <div class="p-3 bg-white rounded operating-hours-card" style="width: 200px;">
+                        <div class="d-flex align-items-center gap-2 text-danger">
+                            <i class="bi bi-clock"></i>
+                            <span>Sabtu</span>
+                        </div>
+                        <p class="mb-0 text-danger">Tidak Beroperasional</p>
+                    </div>
+                    <!-- Sunday -->
+                    <div class="p-3 bg-white rounded operating-hours-card" style="width: 200px;">
+                        <div class="d-flex align-items-center gap-2 text-danger">
+                            <i class="bi bi-clock"></i>
+                            <span>Minggu</span>
+                        </div>
+                        <p class="mb-0 text-danger">Tidak Beroperasional</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
+<style>
+    .operating-hours-card {
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: 1px solid #dee2e6;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .operating-hours-card:hover {
+        transform: translateY(-2px);
+    }
+
+    .operating-hours-card.active {
+        background-color: #0056b3 !important;
+        color: white !important;
+    }
+
+    .operating-hours-card.active i,
+    .operating-hours-card.active span,
+    .operating-hours-card.active p {
+        color: white !important;
+    }
+
+    .operating-hours-card.active .text-danger {
+        color: white !important;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const operatingHoursCards = document.querySelectorAll('.operating-hours-card');
+        
+        operatingHoursCards.forEach(card => {
+            card.addEventListener('click', function() {
+                // Remove active class from all cards
+                operatingHoursCards.forEach(c => c.classList.remove('active'));
+                // Add active class to clicked card
+                this.classList.add('active');
+            });
+        });
+    });
+</script>
 
 <!-- Institution Section -->
 <section class="institutions py-5">
     <div class="container text-center">
-        <h2 class="fw-bold">INSTITUSI LAYANAN</h2>
-        <div class="d-flex justify-content-center flex-wrap gap-3 mt-4">
-            <!-- Add institution logos dynamically -->
-            @for ($i = 0; $i < 10; $i++)
-                <img src="{{ asset('images/institution-logo.png') }}" alt="Institution Logo" class="img-fluid" style="width: 80px;">
-            @endfor
+        <h2 class="fw-bold" style="color: #0056b3;">INSTITUSI LAYANAN</h2>
+        <div class="row justify-content-center mt-4">
+            <!-- First Row -->
+            <div class="col-12 d-flex justify-content-center flex-wrap gap-4 mb-4">
+                <img src="{{ asset('storage/logo/logoMPP.png') }}" alt="Logo 1" class="img-fluid institution-logo">
+                <img src="{{ asset('storage/logo/logoMPP.png') }}" alt="Logo 2" class="img-fluid institution-logo">
+                <img src="{{ asset('storage/logo/logoMPP.png') }}" alt="Logo 3" class="img-fluid institution-logo">
+                <img src="{{ asset('storage/logo/logoMPP.png') }}" alt="Logo 4" class="img-fluid institution-logo">
+                <img src="{{ asset('storage/logo/logoMPP.png') }}" alt="Logo 5" class="img-fluid institution-logo">
+            </div>
+            <!-- Second Row -->
+            <div class="col-12 d-flex justify-content-center flex-wrap gap-4 mb-4">
+                <img src="{{ asset('storage/logo/logoMPP.png') }}" alt="Logo 6" class="img-fluid institution-logo">
+                <img src="{{ asset('storage/logo/logoMPP.png') }}" alt="Logo 7" class="img-fluid institution-logo">
+                <img src="{{ asset('storage/logo/logoMPP.png') }}" alt="Logo 8" class="img-fluid institution-logo">
+                <img src="{{ asset('storage/logo/logoMPP.png') }}" alt="Logo 9" class="img-fluid institution-logo">
+                <img src="{{ asset('storage/logo/logoMPP.png') }}" alt="Logo 10" class="img-fluid institution-logo">
+            </div>
+
+            <!-- Dots for navigation -->
+            <div class="d-flex justify-content-center gap-2 mt-4">
+            <span class="dot bg-primary rounded-circle" style="width: 10px; height: 10px;"></span>
+            <span class="dot bg-secondary rounded-circle" style="width: 10px; height: 10px;"></span>
+            <span class="dot bg-secondary rounded-circle" style="width: 10px; height: 10px;"></span>
+        </div>
         </div>
     </div>
 </section>
 
+<style>
+    .institution-logo {
+        width: 180px;
+        height: 160px;
+        object-fit: contain;
+        padding: 15px;
+        transition: transform 0.3s ease;
+        margin: 0 15px;  /* Increased margin for better spacing */
+    }
+
+    .institution-logo:hover {
+        transform: scale(1.1);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1200px) {
+        .institution-logo {
+            width: 160px;
+            height: 140px;
+            margin: 0 10px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .institution-logo {
+            width: 140px;
+            height: 120px;
+            margin: 0 8px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .institution-logo {
+            width: 120px;
+            height: 100px;
+            margin: 0 5px;
+        }
+    }
+</style>
+
 <!-- Activity Information Section -->
 <section class="activities bg-light py-5">
     <div class="container">
-        <h2 class="fw-bold text-center">INFORMASI KEGIATAN</h2>
-        <div class="row mt-4">
-            @for ($i = 0; $i < 4; $i++)
-                <div class="col-md-3">
-                    <div class="card">
-                        <img src="{{ asset('images/activity.jpg') }}" class="card-img-top" alt="Activity">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="fw-bold" style="color: #0056b3;">INFORMASI KEGIATAN</h2>
+            <a href="#" class="btn btn-outline-primary">LIHAT SEMUA INFORMASI <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4">
+            @for ($i = 0; $i < 6; $i++)
+                <div class="col">
+                    <div class="card h-100 shadow border-0">
+                        <img src="{{ asset('storage/banners/berita1.jpg') }}" class="card-img-top" alt="Activity">
                         <div class="card-body">
-                            <h5 class="card-title">Kegiatan</h5>
-                            <p class="card-text">Deskripsi singkat kegiatan...</p>
+                            <h5 class="card-title">
+                                Setia Mengabdi selama 30 tahun ASN Dinas Kominfo Bangkalan terima penghargaan dharma persandian
+                            </h5>
+                            <p class="text-primary fw-bold mb-1" style="font-size: 0.9rem;">Badan Siber dan Sandi Negara ( BSSN )</p>
+                            <p class="text-muted mb-2" style="font-size: 0.8rem;">28 November 2024</p>
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="{{ asset('storage/logo/logoMPP.png') }}" alt="MPP Bangkalan Logo" style="width: 30px;">
+                                <p class="text-secondary mb-0" style="font-size: 0.9rem;">MPP Bangkalan</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             @endfor
         </div>
-        <div class="text-center mt-4">
-            <a href="#" class="btn btn-primary">Lihat Semua Informasi</a>
-        </div>
+        <nav class="mt-4">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
     </div>
 </section>
 
 <!-- Agenda Section -->
 <section class="agenda py-5">
     <div class="container">
-        <h2 class="fw-bold text-center">AGENDA KEGIATAN</h2>
+        <h2 class="fw-bold" style="color: #0056b3; text-align: center;">AGENDA KEGIATAN</h2>
         <div class="row mt-4">
-            @for ($i = 0; $i < 2; $i++)
+            @for ($i = 0; $i < 3; $i++)
                 <div class="col-md-12">
-                    <div class="card mb-3">
+                    <div class="card mb-4 border-0 shadow-sm agenda-card">
                         <div class="row g-0">
                             <div class="col-md-4">
-                                <img src="{{ asset('images/agenda.jpg') }}" class="img-fluid rounded-start" alt="Agenda">
+                                <img src="{{ asset('storage/banners/berita2.jpg') }}" class="img-fluid rounded-start" alt="Agenda">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h5 class="card-title">Agenda Kegiatan</h5>
-                                    <p class="card-text">Deskripsi singkat agenda kegiatan...</p>
-                                    <a href="#" class="btn btn-primary">Learn More</a>
+                                    <p class="text-muted mb-2" style="font-size: 0.9rem;">
+                                        <i class="bi bi-calendar-event"></i> 22 Maret 2025
+                                        <span class="mx-2">—</span> 
+                                        <i class="bi bi-chat-dots"></i> Agenda Diskominfo
+                                    </p>
+                                    <h5 class="card-title fw-bold" style="color: #0056b3;">
+                                        Diskominfo Bangkalan Gelar Bimtek Penguatan Implementasi PPD
+                                    </h5>
+                                    <p class="text-muted mb-3">
+                                        DINAS KOMUNIKASI DAN INFORMATIKA BANGKALAN
+                                    </p>
+                                    <div class="mt-auto text-end">
+                                        <a href="#" class="btn btn-outline-primary d-inline-flex align-items-center">
+                                            Learn More <i class="bi bi-arrow-right ms-2"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -96,10 +361,50 @@
                 </div>
             @endfor
         </div>
-        <div class="text-center mt-4">
-            <a href="#" class="btn btn-primary">Lihat Semua Agenda</a>
-        </div>
     </div>
 </section>
+
+<!-- Add these styles -->
+<style>
+    .agenda-card {
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .agenda-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 86, 179, 0.15) !important;
+    }
+
+    .agenda-card.active {
+        border: 2px solid #0056b3 !important;
+        background-color: #f8f9ff !important;
+    }
+
+    .agenda-card.active .card-title {
+        color: #003d7a !important;
+    }
+
+    .agenda-card.active .btn-outline-primary {
+        background-color: #0056b3;
+        color: white;
+    }
+</style>
+
+<!-- Add this script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const agendaCards = document.querySelectorAll('.agenda-card');
+        
+        agendaCards.forEach(card => {
+            card.addEventListener('click', function() {
+                // Remove active class from all cards
+                agendaCards.forEach(c => c.classList.remove('active'));
+                // Add active class to clicked card
+                this.classList.add('active');
+            });
+        });
+    });
+</script>
 
 @endsection

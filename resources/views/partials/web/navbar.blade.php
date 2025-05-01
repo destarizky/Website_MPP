@@ -2,7 +2,7 @@
     <div class="container">
         <!-- Logo -->
         <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo" style="height: 50px; margin-right: 10px;">
+            <img src="{{ asset('storage/logo/logoMPP.png') }}" alt="Logo" style="height: 50px; margin-right: 10px;">
             <div>
                 <strong>MAL PELAYANAN PUBLIK</strong><br>
                 <span>Kabupaten Bangkalan</span>

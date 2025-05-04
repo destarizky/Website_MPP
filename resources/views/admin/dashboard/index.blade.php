@@ -20,7 +20,7 @@
                             <div class="col-8">
                                 <div class="numbers">
                                     <p class="card-category">Total Information</p>
-                                    <h3 class="card-title">{{ $total_information }}</h3>
+                                    <h3 class="card-title">15</h3>
                                 </div>
                             </div>
                         </div>
@@ -41,7 +41,7 @@
                             <div class="col-8">
                                 <div class="numbers">
                                     <p class="card-category">Total Agendas</p>
-                                    <h3 class="card-title">{{ $total_agendas }}</h3>
+                                    <h3 class="card-title">8</h3>
                                 </div>
                             </div>
                         </div>
@@ -62,7 +62,7 @@
                             <div class="col-8">
                                 <div class="numbers">
                                     <p class="card-category">Total Institutions</p>
-                                    <h3 class="card-title">{{ $total_institutions }}</h3>
+                                    <h3 class="card-title">12</h3>
                                 </div>
                             </div>
                         </div>
@@ -90,15 +90,16 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($recent_information as $info)
                                     <tr>
-                                        <td>{{ Str::limit($info->title, 30) }}</td>
-                                        <td>{{ $info->created_at->format('d M Y') }}</td>
-                                        <td>
-                                            <span class="badge bg-success">Published</span>
-                                        </td>
+                                        <td>Sample Information 1</td>
+                                        <td>24 Apr 2025</td>
+                                        <td><span class="badge bg-success">Published</span></td>
                                     </tr>
-                                    @endforeach
+                                    <tr>
+                                        <td>Sample Information 2</td>
+                                        <td>23 Apr 2025</td>
+                                        <td><span class="badge bg-success">Published</span></td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -123,15 +124,16 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($upcoming_agendas as $agenda)
                                     <tr>
-                                        <td>{{ Str::limit($agenda->title, 30) }}</td>
-                                        <td>{{ $agenda->date->format('d M Y') }}</td>
-                                        <td>
-                                            <span class="badge bg-warning">Upcoming</span>
-                                        </td>
+                                        <td>Sample Agenda 1</td>
+                                        <td>25 Apr 2025</td>
+                                        <td><span class="badge bg-warning">Upcoming</span></td>
                                     </tr>
-                                    @endforeach
+                                    <tr>
+                                        <td>Sample Agenda 2</td>
+                                        <td>26 Apr 2025</td>
+                                        <td><span class="badge bg-warning">Upcoming</span></td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -146,6 +148,7 @@
 <style>
     .stats-card {
         transition: transform 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
 
     .stats-card:hover {
@@ -173,34 +176,5 @@
     .table {
         margin-bottom: 0;
     }
-
-    .wrapper {
-    display: flex;
-    width: 100%;
-    align-items: stretch;
-}
-
-.sidebar {
-    min-width: 250px;
-    max-width: 250px;
-    min-height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-.main-panel {
-    width: calc(100% - 250px);
-    margin-left: 250px;
-    min-height: 100vh;
-}
-
-.content {
-    padding: 80px 30px 30px;
-}
-
-.navbar {
-    z-index: 1030;
-}
 </style>
 @endpush

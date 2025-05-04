@@ -29,13 +29,13 @@
                         PROFIL
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item">Visi & Misi</a></li>
+                        <li><a class="dropdown-item {{ Request::is('profil/visi-misi') ? 'active' : '' }}" href="{{ route('profile.vision-mission') }}">Visi & Misi</a></li>
                         <li><a class="dropdown-item">Tugas & Fungsi</a></li>
                         <li><a class="dropdown-item">Profil Pimpinan</a></li>
                         <li><a class="dropdown-item">Daftar Pegawai</a></li>
-                        <li><a class="dropdown-item">Sarana & Prasarana</a></li>
+                        <li><a class="dropdown-item {{ Request::is('profil/fasilitas') ? 'active' : '' }}" href="{{ route('profile.facilities') }}">Sarana & Prasarana</a></li>
                         <li><a class="dropdown-item">Prestasi & Inovasi</a></li>
-                        <li><a class="dropdown-item">Dasar Hukum</a></li>
+                        <li><a class="dropdown-item {{ Request::is('profil/dasar-hukum') ? 'active' : '' }}" href="{{ route('profile.legal-basis') }}">Dasar Hukum</a></li>
                     </ul>
                 </li>
 
@@ -43,10 +43,12 @@
                     <a class="nav-link fw-bold" href="#">LAYANAN</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fw-bold" href="#">INFORMASI</a>
+                    <a class="nav-link fw-bold {{ Request::is('informasi*') ? 'active' : '' }}" href="{{ route('informations.index') }}">INFORMASI</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fw-bold" href="#">AGENDA</a>
+                    <a class="nav-link fw-bold {{ Request::is('agenda*') ? 'active' : '' }}" href="{{ route('agenda.index') }}">
+                        AGENDA
+                    </a>
                 </li>
             </ul>
         </div>

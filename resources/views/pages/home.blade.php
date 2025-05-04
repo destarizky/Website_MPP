@@ -283,17 +283,24 @@
     <div class="container">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h2 class="fw-bold" style="color: #0056b3;">INFORMASI KEGIATAN</h2>
-            <a href="#" class="btn btn-outline-primary">LIHAT SEMUA INFORMASI <i class="bi bi-arrow-right"></i></a>
+            <a href="{{ route('informations.index') }}" class="btn btn-outline-primary">LIHAT SEMUA INFORMASI <i class="bi bi-arrow-right"></i></a>
         </div>
         <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4">
             @for ($i = 0; $i < 6; $i++)
                 <div class="col">
                     <div class="card h-100 shadow border-0">
-                        <img src="{{ asset('storage/banners/berita1.jpg') }}" class="card-img-top" alt="Activity">
+                        <a href="{{ route('informations.show', $i) }}" class="text-decoration-none">
+                            <img src="{{ asset('storage/banners/berita1.jpg') }}" 
+                                 class="card-img-top" 
+                                 alt="Activity"
+                                 style="transition: opacity 0.3s ease;">
+                        </a>
                         <div class="card-body">
-                            <h5 class="card-title">
-                                Setia Mengabdi selama 30 tahun ASN Dinas Kominfo Bangkalan terima penghargaan dharma persandian
-                            </h5>
+                            <a href="{{ route('informations.show', $i) }}" class="text-decoration-none">
+                                <h5 class="card-title text-primary hover-title">
+                                    Setia Mengabdi selama 30 tahun ASN Dinas Kominfo Bangkalan terima penghargaan dharma persandian
+                                </h5>
+                            </a>
                             <p class="text-primary fw-bold mb-1" style="font-size: 0.9rem;">Badan Siber dan Sandi Negara ( BSSN )</p>
                             <p class="text-muted mb-2" style="font-size: 0.8rem;">28 November 2024</p>
                             <div class="d-flex align-items-center gap-2">
@@ -327,31 +334,42 @@
 <!-- Agenda Section -->
 <section class="agenda py-5">
     <div class="container">
-        <h2 class="fw-bold" style="color: #0056b3; text-align: center;">AGENDA KEGIATAN</h2>
-        <div class="row mt-4">
+        <h2 class="text-primary mb-4">AGENDA KEGIATAN</h2>
+        <div class="row">
             @for ($i = 0; $i < 3; $i++)
-                <div class="col-md-12">
-                    <div class="card mb-4 border-0 shadow-sm agenda-card">
+                <div class="col-12 mb-3">
+                    <div class="card border">
                         <div class="row g-0">
                             <div class="col-md-4">
-                                <img src="{{ asset('storage/banners/berita2.jpg') }}" class="img-fluid rounded-start" alt="Agenda">
+                                <img src="{{ asset('storage/banners/berita2.jpg') }}" 
+                                     class="img-fluid" 
+                                     alt="Agenda"
+                                     style="height: 100%; object-fit: cover;">
                             </div>
                             <div class="col-md-8">
-                                <div class="card-body">
-                                    <p class="text-muted mb-2" style="font-size: 0.9rem;">
-                                        <i class="bi bi-calendar-event"></i> 22 Maret 2025
-                                        <span class="mx-2">—</span> 
-                                        <i class="bi bi-chat-dots"></i> Agenda Diskominfo
-                                    </p>
-                                    <h5 class="card-title fw-bold" style="color: #0056b3;">
-                                        Diskominfo Bangkalan Gelar Bimtek Penguatan Implementasi PPD
-                                    </h5>
-                                    <p class="text-muted mb-3">
-                                        DINAS KOMUNIKASI DAN INFORMATIKA BANGKALAN
-                                    </p>
-                                    <div class="mt-auto text-end">
-                                        <a href="#" class="btn btn-outline-primary d-inline-flex align-items-center">
-                                            Learn More <i class="bi bi-arrow-right ms-2"></i>
+                                <div class="card-body d-flex flex-column h-100">
+                                    <!-- Keep existing content -->
+                                    <div class="flex-grow-1">
+                                        <p class="text-muted mb-2" style="font-size: 0.9rem;">
+                                            <i class="bi bi-calendar-event"></i> 22 Maret 2025
+                                            <span class="mx-2">—</span> 
+                                            <i class="bi bi-chat-dots"></i> Agenda Diskominfo
+                                        </p>
+                                        <div class="mb-2">
+                                            <span class="text-primary">Dinas Komunikasi dan Informatika</span>
+                                        </div>
+                                        <h5 class="card-title mb-2">
+                                            Diskominfo Bangkalan Gelar Bimtek Penguatan Implementasi PPID
+                                        </h5>
+                                        <p class="text-muted small mb-3">
+                                            DINAS KOMUNIKASI DAN INFORMATIKA KABUPATEN BANGKALAN
+                                        </p>
+                                    </div>
+                                    <!-- Update the Learn More button -->
+                                    <div class="text-end learn-more-wrapper">
+                                        <a href="{{ route('agenda.show', $i) }}" 
+                                           class="btn btn-primary px-4 learn-more-btn">
+                                            Learn More
                                         </a>
                                     </div>
                                 </div>
@@ -361,46 +379,89 @@
                 </div>
             @endfor
         </div>
+        <div class="text-start mt-3">
+            <a href="{{ route('agenda.index') }}" class="btn btn-outline-primary agenda-link">
+                Lihat semua agenda <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
     </div>
 </section>
 
-<!-- Add these styles -->
 <style>
-    .agenda-card {
-        cursor: pointer;
+    .card {
+        background: #ffffff;
+        transition: transform 0.2s ease;
+    }
+
+    .card img:hover {
+        opacity: 0.8;
+    }
+
+    .card:hover {
+        transform: translateY(-2px);
+    }
+
+    .text-primary {
+        color: #0d6efd !important;
+    }
+
+    .btn-primary {
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+    }
+
+    .btn-primary:hover {
+        background-color: #0b5ed7;
+        border-color: #0b5ed7;
+    }
+
+    .agenda-link {
+        color: #0056b3;
+        border-color: #0056b3;
         transition: all 0.3s ease;
     }
 
-    .agenda-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 86, 179, 0.15) !important;
+    .agenda-link:hover {
+        background-color: #0056b3;
+        color: white;
+        transform: translateY(-2px);
     }
 
-    .agenda-card.active {
-        border: 2px solid #0056b3 !important;
-        background-color: #f8f9ff !important;
+    .agenda-link:hover i {
+        transform: translateX(5px);
     }
 
-    .agenda-card.active .card-title {
+    .agenda-link i {
+        transition: transform 0.3s ease;
+    }
+
+    .hover-title {
+        transition: color 0.3s ease;
+    }
+
+    .hover-title:hover {
         color: #003d7a !important;
     }
 
-    .agenda-card.active .btn-outline-primary {
-        background-color: #0056b3;
-        color: white;
+    .learn-more-wrapper {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .learn-more-btn {
+        transform: translateY(0);
+        transition: transform 0.3s ease-in-out;
+        position: relative;
     }
 </style>
 
-<!-- Add this script -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const agendaCards = document.querySelectorAll('.agenda-card');
         
         agendaCards.forEach(card => {
             card.addEventListener('click', function() {
-                // Remove active class from all cards
                 agendaCards.forEach(c => c.classList.remove('active'));
-                // Add active class to clicked card
                 this.classList.add('active');
             });
         });

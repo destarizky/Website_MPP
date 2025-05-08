@@ -1,12 +1,12 @@
-@extends('layouts.admin')
+@extends('partials.admin.admin')
 
 @section('title', 'Dashboard Admin')
 
 @section('content')
-<div class="content">
+<div class="content-wrapper">
     <div class="container-fluid">
         <!-- Statistics Cards -->
-        <div class="row">
+        <div class="row mt-4">
             <!-- Information Stats -->
             <div class="col-lg-4 col-md-6">
                 <div class="card stats-card">
@@ -175,6 +175,10 @@
 
     .table {
         margin-bottom: 0;
+    }
+
+    .content-wrapper {
+        padding-top: 20px;
     }
 </style>
 @endpush

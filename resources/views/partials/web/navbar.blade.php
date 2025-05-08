@@ -40,8 +40,12 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link fw-bold" href="#">LAYANAN</a>
+                    <a class="nav-link fw-bold {{ Request::is('layanan*') ? 'active' : '' }}" 
+                       href="{{ route('services.index') }}">
+                        LAYANAN
+                    </a>
                 </li>
+                
                 <li class="nav-item">
                     <a class="nav-link fw-bold {{ Request::is('informasi*') ? 'active' : '' }}" href="{{ route('informations.index') }}">INFORMASI</a>
                 </li>

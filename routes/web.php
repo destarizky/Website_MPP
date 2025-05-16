@@ -20,6 +20,7 @@ Route::get('/profil/fasilitas', [ProfileController::class, 'facilities'])->name(
 Route::get('/profil/dasar-hukum', [ProfileController::class, 'legalBasis'])->name('profile.legal-basis');
 
 Route::get('/layanan', [ServiceController::class, 'index'])->name('services.index');
+Route::get('/layanan/{id}', [ServiceController::class, 'show'])->name('services.show');
 
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');

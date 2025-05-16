@@ -25,6 +25,7 @@
         <!-- Row 1 -->
         <div class="col-12 col-sm-6 col-md-4">
             <div class="card organization-card text-center">
+                <a href="{{ route('services.show', ['id' => 1]) }}" class="text-decoration-none">
                 <div class="org-logo-container">
                     <img src="{{ asset('storage/logo/logoMPP.png') }}" 
                          class="org-logo" 
@@ -32,7 +33,7 @@
                 </div>
                 <div class="card-body">
                     <p class="org-title">Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu ( DPMTSP )</p>
-                    <a href="#" class="btn btn-link text-decoration-none">
+                    <a href="{{ route('services.show', ['id' => 1]) }}" class="btn btn-link text-decoration-none">
                         Baca Selengkapnya
                     </a>
                 </div>
@@ -42,6 +43,7 @@
         <!-- Additional organizations following the same pattern -->
         <div class="col-12 col-sm-6 col-md-4">
             <div class="card organization-card text-center">
+                <a href="{{ route('services.show', ['id' => 1]) }}" class="text-decoration-none">
                 <div class="org-logo-container">
                     <img src="{{ asset('storage/logo/logoMPP.png') }}" 
                          class="org-logo" 
@@ -49,7 +51,7 @@
                 </div>
                 <div class="card-body">
                     <p class="org-title">Dinas Kependudukan dan Catatan Sipil ( DUKCAPIL )</p>
-                    <a href="#" class="btn btn-link text-decoration-none">
+                    <a href="{{ route('services.show', ['id' => 1]) }}" class="btn btn-link text-decoration-none">
                         Baca Selengkapnya
                     </a>
                 </div>
@@ -59,6 +61,7 @@
         <!-- Additional organizations following the same pattern -->
         <div class="col-12 col-sm-6 col-md-4">
             <div class="card organization-card text-center">
+                <a href="{{ route('services.show', ['id' => 1]) }}" class="text-decoration-none">
                 <div class="org-logo-container">
                     <img src="{{ asset('storage/logo/logoMPP.png') }}" 
                          class="org-logo" 
@@ -66,7 +69,7 @@
                 </div>
                 <div class="card-body">
                     <p class="org-title">Dinas Sosial</p>
-                    <a href="#" class="btn btn-link text-decoration-none">
+                    <a href="{{ route('services.show', ['id' => 1]) }}" class="btn btn-link text-decoration-none">
                         Baca Selengkapnya
                     </a>
                 </div>
@@ -76,6 +79,7 @@
         <!-- Additional organizations following the same pattern -->
         <div class="col-12 col-sm-6 col-md-4">
             <div class="card organization-card text-center">
+                <a href="{{ route('services.show', ['id' => 1]) }}" class="text-decoration-none">
                 <div class="org-logo-container">
                     <img src="{{ asset('storage/logo/logoMPP.png') }}" 
                          class="org-logo" 
@@ -83,7 +87,7 @@
                 </div>
                 <div class="card-body">
                     <p class="org-title">Dinas Perumahan Rakyat dan Kawasan Pemukiman (PRKP)</p>
-                    <a href="#" class="btn btn-link text-decoration-none">
+                    <a href="{{ route('services.show', ['id' => 1]) }}" class="btn btn-link text-decoration-none">
                         Baca Selengkapnya
                     </a>
                 </div>
@@ -93,6 +97,7 @@
         <!-- Additional organizations following the same pattern -->
         <div class="col-12 col-sm-6 col-md-4">
             <div class="card organization-card text-center">
+                <a href="{{ route('services.show', ['id' => 1]) }}" class="text-decoration-none">
                 <div class="org-logo-container">
                     <img src="{{ asset('storage/logo/logo_DinasPerpustakaandanKearsipan.png') }}" 
                          class="org-logo" 
@@ -100,7 +105,7 @@
                 </div>
                 <div class="card-body">
                     <p class="org-title">Dinas Perpustakaan dan Kearsipan Kabupaten Bangkalan</p>
-                    <a href="#" class="btn btn-link text-decoration-none">
+                    <a href="{{ route('services.show', ['id' => 1]) }}" class="btn btn-link text-decoration-none">
                         Baca Selengkapnya
                     </a>
                 </div>
@@ -110,6 +115,7 @@
         <!-- Additional organizations following the same pattern -->
         <div class="col-12 col-sm-6 col-md-4">
             <div class="card organization-card text-center">
+                <a href="{{ route('services.show', ['id' => 1]) }}" class="text-decoration-none">
                 <div class="org-logo-container">
                     <img src="{{ asset('storage/logo/logo_PUDAM.png') }}" 
                          class="org-logo" 
@@ -117,7 +123,7 @@
                 </div>
                 <div class="card-body">
                     <p class="org-title">PDAM Kabupaten Bangkalan</p>
-                    <a href="#" class="btn btn-link text-decoration-none">
+                    <a href="{{ route('services.show', ['id' => 1]) }}" class="btn btn-link text-decoration-none">
                         Baca Selengkapnya
                     </a>
                 </div>
@@ -127,6 +133,7 @@
         <!-- Additional organizations following the same pattern -->
         <div class="col-12 col-sm-6 col-md-4">
             <div class="card organization-card text-center">
+                <a href="{{ route('services.show', ['id' => 1]) }}" class="text-decoration-none">
                 <div class="org-logo-container">
                     <img src="{{ asset('storage/logo/Logo_KantorImigrasi.png') }}" 
                          class="org-logo" 
@@ -134,7 +141,7 @@
                 </div>
                 <div class="card-body">
                     <p class="org-title">Kantor IMIGRASI</p>
-                    <a href="#" class="btn btn-link text-decoration-none">
+                    <a href="{{ route('services.show', ['id' => 1]) }}" class="btn btn-link text-decoration-none">
                         Baca Selengkapnya
                     </a>
                 </div>
@@ -144,6 +151,7 @@
         <!-- Additional organizations following the same pattern -->
         <div class="col-12 col-sm-6 col-md-4">
             <div class="card organization-card text-center">
+                <a href="{{ route('services.show', ['id' => 1]) }}" class="text-decoration-none">
                 <div class="org-logo-container">
                     <img src="{{ asset('storage/logo/LogoBPJS.png') }}" 
                          class="org-logo" 
@@ -151,7 +159,7 @@
                 </div>
                 <div class="card-body">
                     <p class="org-title">BPJS Ketenagakerjaan</p>
-                    <a href="#" class="btn btn-link text-decoration-none">
+                    <a href="{{ route('services.show', ['id' => 1]) }}" class="btn btn-link text-decoration-none">
                         Baca Selengkapnya
                     </a>
                 </div>
@@ -161,6 +169,7 @@
         <!-- Additional organizations following the same pattern -->
         <div class="col-12 col-sm-6 col-md-4">
             <div class="card organization-card text-center">
+                <a href="{{ route('services.show', ['id' => 1]) }}" class="text-decoration-none">
                 <div class="org-logo-container">
                     <img src="{{ asset('storage/logo/Logo_BankJatim.png') }}" 
                          class="org-logo" 
@@ -168,7 +177,7 @@
                 </div>
                 <div class="card-body">
                     <p class="org-title">Bank Jatim</p>
-                    <a href="#" class="btn btn-link text-decoration-none">
+                    <a href="{{ route('services.show', ['id' => 1]) }}" class="btn btn-link text-decoration-none">
                         Baca Selengkapnya
                     </a>
                 </div>
@@ -178,6 +187,7 @@
         <!-- Additional organizations following the same pattern -->
         <div class="col-12 col-sm-6 col-md-4">
             <div class="card organization-card text-center">
+                <a href="{{ route('services.show', ['id' => 1]) }}" class="text-decoration-none">
                 <div class="org-logo-container">
                     <img src="{{ asset('storage/logo/Logo_PolresBangkalan.png') }}" 
                          class="org-logo" 
@@ -185,7 +195,7 @@
                 </div>
                 <div class="card-body">
                     <p class="org-title">Polres Kabupaten Bangkalan</p>
-                    <a href="#" class="btn btn-link text-decoration-none">
+                    <a href="{{ route('services.show', ['id' => 1]) }}" class="btn btn-link text-decoration-none">
                         Baca Selengkapnya
                     </a>
                 </div>
@@ -195,6 +205,7 @@
         <!-- Additional organizations following the same pattern -->
         <div class="col-12 col-sm-6 col-md-4">
             <div class="card organization-card text-center">
+                <a href="{{ route('services.show', ['id' => 1]) }}" class="text-decoration-none">
                 <div class="org-logo-container">
                     <img src="{{ asset('storage/logo/logoMPP.png') }}" 
                          class="org-logo" 
@@ -202,7 +213,7 @@
                 </div>
                 <div class="card-body">
                     <p class="org-title">Kantor Bersama SAMSAT</p>
-                    <a href="#" class="btn btn-link text-decoration-none">
+                    <a href="{{ route('services.show', ['id' => 1]) }}" class="btn btn-link text-decoration-none">
                         Baca Selengkapnya
                     </a>
                 </div>
@@ -212,6 +223,7 @@
         <!-- Additional organizations following the same pattern -->
         <div class="col-12 col-sm-6 col-md-4">
             <div class="card organization-card text-center">
+                <a href="{{ route('services.show', ['id' => 1]) }}" class="text-decoration-none">
                 <div class="org-logo-container">
                     <img src="{{ asset('storage/logo/Logo_KejaksaanNegeri.png') }}" 
                          class="org-logo" 
@@ -219,7 +231,7 @@
                 </div>
                 <div class="card-body">
                     <p class="org-title">Kejaksaan Negeri Bangkalan</p>
-                    <a href="#" class="btn btn-link text-decoration-none">
+                    <a href="{{ route('services.show', ['id' => 1]) }}" class="btn btn-link text-decoration-none">
                         Baca Selengkapnya
                     </a>
                 </div>
@@ -229,6 +241,7 @@
         <!-- Additional organizations following the same pattern -->
         <div class="col-12 col-sm-6 col-md-4">
             <div class="card organization-card text-center">
+                <a href="{{ route('services.show', ['id' => 1]) }}" class="text-decoration-none">
                 <div class="org-logo-container">
                     <img src="{{ asset('storage/logo/Logo_PengadilanAgama.png') }}" 
                          class="org-logo" 
@@ -236,7 +249,7 @@
                 </div>
                 <div class="card-body">
                     <p class="org-title">Pengadilan Agama Bangkalan</p>
-                    <a href="#" class="btn btn-link text-decoration-none">
+                    <a href="{{ route('services.show', ['id' => 1]) }}" class="btn btn-link text-decoration-none">
                         Baca Selengkapnya
                     </a>
                 </div>

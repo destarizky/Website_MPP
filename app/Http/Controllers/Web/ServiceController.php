@@ -10,4 +10,8 @@ class ServiceController extends Controller
     {
         return view('pages.services.index');
     }
+    public function show($id)
+    {
+        return view('pages.services.show');
+    }
 }
